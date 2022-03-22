@@ -29,4 +29,13 @@ public class SessionStorage : MonoBehaviour
     {
         return currentUser != null;
     }
+
+    public bool isAdmin()
+    {
+        if (currentUser.username == "admin")
+        {
+            return true;
+        }
+        return false;
+    }
 }

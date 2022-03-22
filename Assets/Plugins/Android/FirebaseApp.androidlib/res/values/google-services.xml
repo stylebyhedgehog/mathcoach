@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
-  <string name="firebase_database_url" translatable="false">https://mathcoach-cb340-default-rtdb.firebaseio.com/</string>
-  <string name="gcm_defaultSenderId" translatable="false">807313002946</string>
-  <string name="google_storage_bucket" translatable="false">mathcoach-cb340.appspot.com</string>
-  <string name="project_id" translatable="false">mathcoach-cb340</string>
-  <string name="google_api_key" translatable="false">AIzaSyCNJ9QROm0gu_dRgRfhvG2DOrB-xsGwhoQ</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCNJ9QROm0gu_dRgRfhvG2DOrB-xsGwhoQ</string>
-  <string name="google_app_id" translatable="false">1:807313002946:android:558458936a624e4205065b</string>
-  <string name="default_web_client_id" translatable="false">807313002946-c51eg0pgi556peqk3qvpdajj7tc0og1l.apps.googleusercontent.com</string>
+  <string name="firebase_database_url" translatable="false">https://math-c87cf-default-rtdb.firebaseio.com/</string>
+  <string name="gcm_defaultSenderId" translatable="false">238942437006</string>
+  <string name="google_storage_bucket" translatable="false">math-c87cf.appspot.com</string>
+  <string name="project_id" translatable="false">math-c87cf</string>
+  <string name="google_api_key" translatable="false">AIzaSyDY7QFAmH7GTUcAVKbl_q5uF0o9YcLf2KE</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDY7QFAmH7GTUcAVKbl_q5uF0o9YcLf2KE</string>
+  <string name="google_app_id" translatable="false">1:238942437006:android:84e6c57ce92de1be9c93df</string>
+  <string name="default_web_client_id" translatable="false">238942437006-1kipjml87c4bjbulpme2b4pl114n102b.apps.googleusercontent.com</string>
 </resources>

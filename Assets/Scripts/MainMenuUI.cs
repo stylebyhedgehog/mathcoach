@@ -12,14 +12,18 @@ public class MainMenuUI : MonoBehaviour
 
     [SerializeField] private Button statBtn;
 
+    [SerializeField] private Button adminBtn;
+
     [SerializeField] private GameObject AuthPanel;
     [SerializeField] private GameObject BlockListPanel;
     [SerializeField] private GameObject StatPanel;
+    [SerializeField] private GameObject AdminPanel;
     void Start()
     {
         logOutBtn.gameObject.SetActive(false);
         blockListBtn.gameObject.SetActive(false);
         statBtn.gameObject.SetActive(false);
+        adminBtn.gameObject.SetActive(false);
         Actions();
         SessionStorage.singedInAction += onLogInHandler;
         SessionStorage.logOutAction += onLogOutHandler;
@@ -32,6 +36,8 @@ public class MainMenuUI : MonoBehaviour
         logOutBtn.onClick.AddListener(()=>SessionStorage.Instance.unsetUser());
         blockListBtn.onClick.AddListener(() => BlockListPanel.SetActive(true));
         statBtn.onClick.AddListener(()=> StatPanel.SetActive(true));
+        adminBtn.onClick.AddListener(()=> AdminPanel.SetActive(true));
+
     }
 
     private void onLogInHandler()
@@ -40,6 +46,10 @@ public class MainMenuUI : MonoBehaviour
         logOutBtn.gameObject.SetActive(true);
         blockListBtn.gameObject.SetActive(true);
         statBtn.gameObject.SetActive(true);
+        if (SessionStorage.Instance.isAdmin())
+        {
+            adminBtn.gameObject.SetActive(true);
+        }
     }
 
     private void onLogOutHandler()
@@ -48,5 +58,6 @@ public class MainMenuUI : MonoBehaviour
         logOutBtn.gameObject.SetActive(false);
         blockListBtn.gameObject.SetActive(false);
         statBtn.gameObject.SetActive(false);
+        adminBtn.gameObject.SetActive(false);
     }
 }

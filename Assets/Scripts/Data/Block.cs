@@ -10,6 +10,10 @@ public class Block
 
     public Dictionary<string,Task> Tasks { get; set; }
 
+    public Block()
+    {
+
+    }
     public Block(int id, string description, string theory, Dictionary<string, Task> tasks)
     {
         Id = id;

@@ -52,7 +52,7 @@ public class TaskUI : MonoBehaviour
         if (taskSolutionInput.text == block.Tasks["task"+currentNumber.ToString()].solution)
         {
             alert.text = "Верно";
-            taskSolutionInput.enabled = false;
+        
             
         }
         else

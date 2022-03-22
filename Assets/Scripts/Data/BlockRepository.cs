@@ -1,9 +1,6 @@
 
-using System.Collections.Generic;
 using UnityEngine;
-using Firebase;
 using Firebase.Database;
-using System;
 using UnityEngine.Events;
 using Newtonsoft.Json;
 
@@ -17,11 +14,25 @@ public class BlockRepository : MonoBehaviour
         {
             reference = FirebaseDatabase.DefaultInstance.GetReference("blocks");
             Instance = this;
+         
         }
     }
   
 
-   
+    public void addNewBlock(Block blockData)
+    {
+        string blockName ="block" + blockData.Id.ToString();
+        reference.Child(blockName).Child("description").SetValueAsync(blockData.Description);
+        reference.Child(blockName).Child("id").SetValueAsync(blockData.Id);
+        reference.Child(blockName).Child("theory").SetValueAsync(blockData.Theory);
+
+        foreach (var task in blockData.Tasks)
+        {
+            reference.Child(blockName).Child("tasks").Child(task.Key).Child("number").SetValueAsync(task.Value.number);
+            reference.Child(blockName).Child("tasks").Child(task.Key).Child("solution").SetValueAsync(task.Value.solution);
+            reference.Child(blockName).Child("tasks").Child(task.Key).Child("statement").SetValueAsync(task.Value.statement);
+        }
+    }
 
     public void getAllBlocks(UnityAction<Block> onSuccessAction)
     {
